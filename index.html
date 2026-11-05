@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d27">
+<title>تولدت مبارک محنا ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap');
+:root{--pink:#ff9bc9;--violet:#b9a2ff;--bg:#090817}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#30204c 0%,#100d27 42%,#070713 100%);color:#fff;font-family:Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 80px,#ffc6e2,transparent),radial-gradient(1px 1px at 150px 160px,#fff,transparent);background-size:190px 190px;z-index:-1}
+header{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 18px;position:relative}
+.eyebrow{color:#e6c9ff;letter-spacing:2px;font-size:.9rem}
+h1{font-size:clamp(2.3rem,8vw,5rem);margin:12px 0;color:#fff;text-shadow:0 0 25px #ff91c7}
+.subtitle{color:#e5dff5;max-width:620px;line-height:2}
+button,.btn{border:0;border-radius:999px;padding:13px 24px;background:linear-gradient(100deg,#ff8fbd,#a991ff);color:#20132e;font:600 1rem Vazirmatn;cursor:pointer;box-shadow:0 8px 30px #d88bce33}
+button:hover{transform:translateY(-2px)}
+.heart{font-size:2.2rem;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.2)}}
+section{max-width:1000px;margin:auto;padding:70px 20px}
+h2{text-align:center;font-size:clamp(1.7rem,5vw,2.6rem);color:#ffd0e8;margin:0 0 12px}
+.lead{text-align:center;color:#d8d0e8;line-height:2;margin:0 auto 32px;max-width:700px}
+.cake-wrap{text-align:center;padding:28px;background:#ffffff0b;border:1px solid #ffffff18;border-radius:28px;max-width:550px;margin:auto}
+.cake{font-size:6rem;filter:drop-shadow(0 0 18px #ff9bc966)}
+.candle{display:inline-block;animation:flicker .7s infinite alternate}
+@keyframes flicker{to{filter:brightness(1.7);transform:rotate(4deg)}}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:#ffffff0c;border:1px solid #ffffff1c;border-radius:20px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 35px #0007}
+.card img{width:100%;height:260px;object-fit:cover;display:block;cursor:zoom-in}
+.caption{padding:14px 16px;color:#eee;line-height:1.8}
+.caption small{display:block;color:#c9b7e9;margin-top:5px}
+.note{background:linear-gradient(135deg,#ffffff12,#ffb6dc12);border:1px solid #ffffff24;border-radius:24px;padding:25px;max-width:720px;margin:auto;text-align:center;line-height:2.2}
+.envelope{font-size:5rem;cursor:pointer;display:block;margin:8px auto;transition:.3s}
+.envelope:hover{transform:scale(1.1) rotate(-4deg)}
+.letter{display:none;text-align:right;white-space:pre-line;color:#fff0f8;line-height:2.2;padding:20px;margin-top:15px;background:#100b25;border-radius:18px;border:1px solid #ffb5dc55}
+footer{text-align:center;color:#bdb2d1;padding:30px 15px;font-size:.85rem}
+#lightbox{display:none;position:fixed;inset:0;background:#000e;z-index:10;align-items:center;justify-content:center;padding:20px}
+#lightbox img{max-width:95vw;max-height:90vh;border-radius:14px}
+#lightbox span{position:absolute;top:15px;left:22px;font-size:2rem;cursor:pointer}
+.confetti{position:fixed;top:-20px;z-index:5;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:0}}
+@media(max-width:520px){.card img{height:220px}section{padding:55px 16px}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="heart">♡</div>
+  <div class="eyebrow">یک سورپرایز کوچک، برای یک آدم خاص</div>
+  <h1>محنا، یه سورپرایز مخصوص تو دارم...</h1>
+  <p class="subtitle">امروز نوبت توئه که تمام قشنگی‌های دنیا رو به خودت هدیه بگیری. آماده‌ای؟</p>
+  <button onclick="document.querySelector('#birthday').scrollIntoView({behavior:'smooth'});celebrate()">باز کردن سورپرایز ✨</button>
+</header>
+
+<section id="birthday">
+  <h2>تولدت مبارک محنا! 🎂</h2>
+  <p class="lead">امیدوارم سال تازه‌ی زندگیت پر از آرامش، خنده‌های واقعی و آرزوهایی باشه که یکی‌یکی به حقیقت تبدیل می‌شن.</p>
+  <div class="cake-wrap">
+    <div class="cake"><span class="candle">🕯️</span>🎂<span class="candle">🕯️</span></div>
+    <p>یه آرزوی قشنگ کن و شمع‌هات رو فوت کن! 💗</p>
+    <button onclick="blow()">فوت کردن شمع‌ها 🌬️</button>
+    <p id="wish" aria-live="polite"></p>
+  </div>
+</section>
+
+<section id="universe">
+  <h2>جهان در روز تولد تو 🌌</h2>
+  <p class="lead">سه قاب از شگفتی‌های کیهان؛ برای اینکه یادت بمونه جهان چقدر بزرگه و هر روزش می‌تونه پر از زیبایی باشه.</p>
+  <div class="gallery">
+    <article class="card"><img src="images/space-1.png" alt="تصویر نجومی اول" onclick="zoom(this.src)"><div class="caption">قابی از دل کیهان <small>تصویر اول — عنوان و تاریخ اصلی ناسا را اینجا وارد کن.</small></div></article>
+    <article class="card"><img src="images/space-2.png" alt="تصویر نجومی دوم" onclick="zoom(this.src)"><div class="caption">جهانی پر از کهکشان <small>تصویر دوم — عنوان و تاریخ اصلی ناسا را اینجا وارد کن.</small></div></article>
+    <article class="card"><img src="images/space-3.png" alt="تصویر نجومی سوم" onclick="zoom(this.src)"><div class="caption">زیبایی بی‌پایان ستاره‌ها <small>تصویر سوم — عنوان و تاریخ اصلی ناسا را اینجا وارد کن.</small></div></article>
+  </div>
+  <p class="lead" style="margin-top:24px">جهان خیلی بزرگه؛ اما امروز این گوشه‌ی کوچیک از اینترنت، فقط برای توئه. ❤️</p>
+</section>
+
+<section id="letter">
+  <h2>یه نامه فقط برای تو 💌</h2>
+  <p class="lead">روی پاکت بزن تا نامه‌ات باز بشه...</p>
+  <div class="note">
+    <span class="envelope" onclick="openLetter()" role="button" aria-label="باز کردن نامه">💌</span>
+    <button onclick="openLetter()">باز کردن نامه</button>
+    <div class="letter" id="letterText">محنای عزیزم،
+
+تولدت مبارک. ❤️
+امیدوارم امروز و تمام روزهای سال جدیدت پر از اتفاق‌های خوب و لبخندهای از ته دل باشه.
+بودنت برای من قشنگ و ارزشمنده؛ و خوشحالم که فرصت دارم امروز رو بهت تبریک بگم.
+آرزو می‌کنم همیشه دلت آروم، مسیرت روشن و آرزوهات نزدیک باشن.
+
+با کلی آرزوی خوب برای تو،
+تولدت مبارک! ❤️</div>
+  </div>
+</section>
+<footer>ساخته‌شده با عشق، مخصوص محنا ♡</footer>
+<div id="lightbox" onclick="this.style.display='none'"><span>×</span><img id="large"></div>
+<script>
+function celebrate(){for(let i=0;i<55;i++){let e=document.createElement('i');e.className='confetti';e.textContent=['✦','♡','✧','❀'][Math.floor(Math.random()*4)];e.style.left=Math.random()*100+'vw';e.style.color=['#ff9bc9','#c6adff','#fff0a8'][i%3];e.style.fontSize=(12+Math.random()*18)+'px';e.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6500)}}
+function blow(){document.querySelectorAll('.candle').forEach(x=>x.textContent='');document.getElementById('wish').textContent='آرزوت هرچی که هست، امیدوارم قشنگ‌تر از چیزی که تصور می‌کنی برآورده بشه. ❤️';celebrate()}
+function openLetter(){document.getElementById('letterText').style.display='block';celebrate()}
+function zoom(src){document.getElementById('large').src=src;document.getElementById('lightbox').style.display='flex'}
+</script>
+</body></html>
